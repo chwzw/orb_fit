@@ -339,11 +339,14 @@ def cal_cov_and_print(result):
             perr = np.sqrt(np.diag(pcov))
         except np.linalg.LinAlgError:
             print("无法计算协方差矩阵，可能是雅可比矩阵奇异")
-            return pcov, perr
+            
     else:
         print("拟合可能未收敛，无法计算标准误差")
     
-    return 0
+    try: 
+        return pcov, perr
+    except:
+        return None, None
 
 
 

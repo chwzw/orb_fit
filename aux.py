@@ -11,8 +11,8 @@ def initial_params(model, dont_fit_five_params=False):
         100] # parallax guess (mas)
     
     initial_campbell_parameters = [
-        100, # period guess (days)
-        0.5, # ecc guess
+        0.1, # period guess (years)
+        0.0, # ecc guess
         50, # semi_maj guess (mas)
         np.radians(60), # incl guess (rad)
         np.radians(30), # arg_peri guess (rad)
@@ -20,8 +20,8 @@ def initial_params(model, dont_fit_five_params=False):
         0 # m_0 guess (rad)
     ]
     initial_ti_parameters = [
-        100, # period guess (days)
-        0.5, # ecc guess
+        0.1, # period guess (years)
+        0.0, # ecc guess
         0, # M0 guess (rad)
         0, # A (mas)
         0, # B (mas)
@@ -44,7 +44,7 @@ def initial_params(model, dont_fit_five_params=False):
 def get_bounds(MODEL):
     lower_bounds = [
         -np.inf, -np.inf, -np.inf, -np.inf, 0, # d_ra, d_dec, pmra, pmdec, parallax
-        0.01, 0, 0.01, 0, 0, 0, 0 # period, ecc, semi_maj, incl, arg_peri, omega, m_0
+        0.001, 0, 0.01, 0, 0, 0, 0 # period, ecc, semi_maj, incl, arg_peri, omega, m_0
     ]
     upper_bounds = [
         np.inf, np.inf, np.inf, np.inf, np.inf, # d_ra, d_dec, pmra, pmdec, parallax
