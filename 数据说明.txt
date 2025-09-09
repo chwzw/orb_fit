@@ -1,0 +1,12 @@
+仿真数据(ast_epoch_data.csv) md5校验码：
+9cffd9f90bbe8122cca57b88951ebd3c
+
+仿真数据格式：
+source_id: 每颗星的唯一标识符，类型：int32
+t: 观测历元(TCB)，单位：Jyear，类型：float64
+ra: 观测历元时刻的赤经观测值，单位：deg，类型：float64
+ra_err: 观测历元时刻赤经观测的误差，单位：mas，类型：float64
+dec: 观测历元时刻的赤纬观测值，单位：deg，类型：float64
+dec_err: 观测历元时刻赤纬观测的误差，单位：mas，类型：float64
+bx, by, bz: 观测历元时刻CSST在ICRS中的位置，单位：AU，类型：float64
+vx, vy, vz: 观测历元时刻CSST相对太阳系质心的速度，单位：km/s，类型：float64
