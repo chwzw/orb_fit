@@ -11,7 +11,7 @@ def initial_params(model, dont_fit_five_params=False):
         100] # parallax guess (mas)
     
     initial_campbell_parameters = [
-        0.1, # period guess (years) wo shi xiao yu
+        0.1, # period guess (years)
         0.0, # ecc guess
         50, # semi_maj guess (mas)
         np.radians(60), # incl guess (rad)
